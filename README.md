@@ -9,7 +9,7 @@ assignment in the [requirements](#requirements) segment below.
 1. [Description](#description)
     1. [Functional Requirements](#requirements)
     2. [API Specification](#specifications)
-    3. [How To](#howto)
+    3. [How To Run](#howto)
 
 
 ## Functional Requirements <a name="requirements"></a> ##
