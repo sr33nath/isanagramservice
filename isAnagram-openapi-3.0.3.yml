@@ -1,0 +1,51 @@
+openapi: 3.0.3
+info:
+  title: Is Anagram Service - OpenAPI 3.0
+  description: |-
+    This is a simple API which accepts two strings as input and returns true or false response if the strings are anagrams of each other.
+  version: 0.0.1
+tags:
+  - name: isAnagramService
+    description: Everything about the API
+paths:
+  /isAnagram:
+    post:
+      tags:
+        - isAnagramService
+      summary: Check if two strings are anagrams of each other
+      description: Check if two strings are anagrams of each other
+      requestBody:
+        description: Create a new pet in the store
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ServerRequest'
+        required: true
+      responses:
+        '200':
+          description: Successful operation
+          content:
+            text/plain:
+              schema:
+                type: string
+                enum:
+                  - true
+                  - false
+        '400':
+          description: Invalid input
+        '500':
+          description: Internal server error
+components:
+  schemas:
+    ServerRequest:
+      type: object
+      required:
+        - firstString
+        - secondString
+      properties:
+        firstString:
+          type: string
+          description: First String
+        secondString:
+          type: string
+          description: Second String
